@@ -1,0 +1,251 @@
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"sway/mode",
+    "custom/workspace-begin",
+		"hyprland/workspaces",
+    "custom/workspace-end",
+		"sway/window"
+	],
+
+	"modules-right": [
+		"pulseaudio",
+		"network",
+		"memory",
+		"cpu",
+		"temperature",
+		//"battery",
+		"hyprland/language",
+    "custom/workspace-begin",
+		"tray",
+    "custom/workspace-end",
+		"clock#date",
+		//"custom/arrow1",
+		"clock#time"
+	],
+
+	// Modules
+
+	"battery": {
+		"interval": 10,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format-time": "{H}:{M:02}",
+		"format": "{icon} {capacity}% ({time})",
+		"format-charging": " {capacity}% ({time})",
+		"format-charging-full": " {capacity}%",
+		"format-full": "{icon} {capacity}%",
+		"format-alt": "{icon} {power}W",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"clock#time": {
+		"interval": 10,
+		"format": "[   {:%H:%M} ]",
+		"tooltip": false
+	},
+
+	"clock#date": {
+		"interval": 20,
+		"format": "[   {:%e %b %Y} ]",
+		"tooltip": false
+		//"tooltip-format": "{:%e %B %Y}"
+	},
+
+	"cpu": {
+		"interval": 5,
+		"tooltip": false,
+		"format": "[   CPU:{usage}% ]",
+		"format-alt": "[   {load} ]",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+
+
+	 "hyprland/language": {
+
+"format": "[{}]",
+
+
+"format-en": "US 🇬🇧",
+
+"format-sr": "RS 🇷🇸",
+
+},
+
+	"memory": {
+		"interval": 5,
+		"format": "[   MEM:{used:0.1f}G/{total:0.1f}G ]",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		},
+		"tooltip": false
+	},
+
+	"network": {
+		"interval": 5,
+		"format-wifi": "[ {essid} ({signalStrength}%)]",
+		"format-ethernet": "[ {ifname}]",
+		"format-disconnected": "[No connection]",
+		"format-alt": "[ {ipaddr}/{cidr}]",
+		"tooltip": false
+	},
+
+	"sway/mode": {
+		"format": "{}",
+		"tooltip": false
+	},
+
+	"sway/window": {
+		"format": "{}",
+		"max-length": 30,
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+		"disable-scroll-wraparound": true,
+		"smooth-scrolling-threshold": 4,
+		"active-only": false,
+		"all-outputs": true,
+		"enable-bar-scroll": true,
+		"format": "{icon}",
+    "format-icons": {
+		  "1": "I",
+		  "2": "II",
+		  "3": "III",
+		  "4": "IV",
+		  "5": "V",
+      		  "6": "VI",
+      		  "7": "VII",
+                  "8": "VIII",
+                  "9": "IX"
+
+
+		  //"active": "",
+		  //"default": ""
+      //"default": " ",
+      //"active": "*"
+	},
+		"persistent-workspaces": {
+			"*":9
+		}
+
+	},
+
+	"pulseaudio": {
+		"format": "[ {icon}  VOL: {volume}% ]",
+		"format-bluetooth": "{icon}  {volume}%",
+		"format-muted": "[  VOL: ]",
+		"format-icons": {
+			"headphone": "",
+			"hands-free": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": ["", ""]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"tooltip": false
+	},
+
+	"temperature": {
+		"critical-threshold": 90,
+		"interval": 5,
+		"format": "{icon} {temperatureC}°",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": false
+	},
+
+	"tray": {
+		"icon-size": 18
+		//"spacing": 10
+	},
+
+	"custom/arrow1": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow2": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow3": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow4": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow5": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow6": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow7": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow8": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow9": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"custom/arrow10": {
+		"format": "",
+		"tooltip": false
+	},
+
+  "custom/workspace-begin": {
+    "format": "[",
+    "tooltip": false
+  },
+
+
+  "custom/workspace-end": {
+    "format": "]",
+    "tooltip": false
+  }
+
+
+
+
+}
+// vi:ft=jsonc
