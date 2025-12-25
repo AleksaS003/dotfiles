@@ -1,0 +1,111 @@
+# $HOME/.config/alacritty/alacritty.toml
+# by Rito Ghosh 2023-10-06
+
+# Alacritty now uses TOML formatting for its config files.
+# This is a simple example.
+
+# There are the specification here: https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd
+# It is not obvious how it translates to TOML. But it is extremely straightforward.
+
+# example: WINDOW, COLORS, etc. are tables, and should be represented as [window], [colors], respectively.
+# specifics of variables go under them. e.g.- look under "dynamic_padding" under-
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#window
+# write `dynamic_padding = true` (without backticks -`) under the table [window]
+# for variables with multiple values, use "dotted keys". Like setting `padding.x = 5` under [window].
+# This is simple. If not clear, do several trials and errors.
+
+# Below is my initial set-up. The TOML homepage (https://toml.io/en/v1.0.0) was very helpful in figuring this out. 
+# I put the file alacritty.toml in $HOME/.config/alacritty. However it can be kept anywhere among the places mentioned in
+# https://github.com/alacritty/alacritty/tree/master#configuration
+
+[window]
+
+opacity = 1
+
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal.family = "Iosevka Nerd Font"
+bold.family = "Iosevka Nerd Font"
+italic.family = "Iosevka Nerd Font"
+bold_italic.family = "Iosevka Nerd Font"
+
+size = 12.0
+# Colors section of "Alacritty - TOML configuration file format"
+# https://github.com/alacritty/alacritty/blob/master/extra/man/alacritty.5.scd#colors
+
+[colors.primary]
+foreground = "#e0def4"
+background = "#191724"
+dim_foreground = "#908caa"
+bright_foreground = "#e0def4"
+
+[colors.cursor]
+text = "#e0def4"
+cursor = "#524f67"
+
+[colors.vi_mode_cursor]
+text = "#e0def4"
+cursor = "#524f67"
+
+[colors.search.matches]
+foreground = "#908caa"
+background = "#26233a"
+
+[colors.search.focused_match]
+foreground = "#191724"
+background = "#ebbcba"
+
+[colors.hints.start]
+foreground = "#908caa"
+background = "#1f1d2e"
+
+[colors.hints.end]
+foreground = "#6e6a86"
+background = "#1f1d2e"
+
+[colors.line_indicator]
+foreground = "None"
+background = "None"
+
+[colors.footer_bar]
+foreground = "#e0def4"
+background = "#1f1d2e"
+
+[colors.selection]
+text = "#e0def4"
+background = "#403d52"
+
+[colors.normal]
+black = "#26233a"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
+
+[colors.bright]
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
+white = "#e0def4"
+
+[colors.dim]
+black = "#6e6a86"
+red = "#eb6f92"
+green = "#31748f"
+yellow = "#f6c177"
+blue = "#9ccfd8"
+magenta = "#c4a7e7"
+cyan = "#ebbcba"
